@@ -1,16 +1,19 @@
-# React + Vite
+#CHEF IT OUT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#Problem statement
+Food outlets on large university campuses often experience unpredictable crowd surges, leading students to spend significant time searching for less crowded cafes or waiting in long queues. Currently, there is no centralized platform providing real-time information on cafe crowd levels or food availability. As a result, students move inefficiently across campus, causing increased congestion at certain food outlets.
 
-Currently, two official plugins are available:
+#Features
+-Real time crowd monitoring
+-Stock check: Food availability (to implement)
+-Crowd sourced verification system
+-Credibility Score: A fun game(Cafe quest)(to implement) for students, to avoid fake reviews from the student’s end
+-Predicted crowd patterns(to implement)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#Tech stack
+-backend: Node.js+ express+ mongoDB 
+-frontend: React.js+ tailwind CSS (Vite)
+-Design: Figma 
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+#Links 
+Figma file : https://www.figma.com/design/ItJfh0ad4CK69CHqi2DfAH/Untitled?node-id=0-1&t=ev5Mft5N545WuqwA-1
