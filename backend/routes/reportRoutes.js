@@ -1,37 +1,27 @@
 const express = require("express");
 const router = express.Router();
+const Restaurant = require("../models/Restaurant");
+const auth = require("../middleware/authMiddleware");
 
-const { reports, restaurants } = require("../data");
-
-router.post("/", (req, res) => {
-
- const { restaurantId, status } = req.body;
-
- const report = {
-  restaurantId,
-  status,
-  timestamp: Date.now()
- };
-
- reports.push(report);
-
- const fullReports = reports.filter(
-  r => r.restaurantId === restaurantId && r.status === "full"
- );
-
- if (fullReports.length >= 5) {
-
-  const restaurant = restaurants.find(r => r.id === restaurantId);
-
-  if (restaurant) {
-   restaurant.status = "full";
+router.post("/:id", auth, async (req, res) => {
+  if (req.user.role !== "student") {
+    return res.status(403).json({ message: "Only students can report" });
   }
 
- }
+  const restaurant = await Restaurant.findById(req.params.id);
 
- res.json({
-  message: "Report submitted"
- });
+  restaurant.reportCount += 1;
+  if (restaurant.reportCount >= 5) {
+
+    restaurant.crowdLevel = "Busy";
+
+    restaurant.reportCount = 0;
+
+  }
+
+  await restaurant.save();
+
+  res.json({ message: "Report submitted" });
 
 });
 
