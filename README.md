@@ -6,15 +6,15 @@ Food outlets on large university campuses often experience unpredictable crowd s
 
 #Features
 
-##Real time crowd monitoring
+-Real time crowd monitoring
 
-##Stock check: Food availability (to implement)
+-Stock check: Food availability (to implement)
 
-##Crowd sourced verification system
+-Crowd sourced verification system
 
-##Credibility Score: A fun game(Cafe quest)(to implement) for students, to avoid fake reviews from the student’s end
+-Credibility Score: A fun game(Cafe quest)(to implement) for students, to avoid fake reviews from the student’s end
 
-##Predicted crowd patterns(to implement)
+-Predicted crowd patterns(to implement)
 
 #Tech stack
 
